@@ -17,8 +17,7 @@ WORKDIR /app
 
 # uncomment bawah ini kalo pake canvas
 RUN apk update \
-    && apk add --no-cache build-base g++ cairo-dev jpeg-dev pango-dev giflib-dev python3 ca-certificates \
-    && apk add --update  --repository http://dl-3.alpinelinux.org/alpine/edge/testing libmount ttf-dejavu ttf-droid ttf-freefont ttf-liberation fontconfig 
+    && apk add --no-cache build-base g++ cairo-dev jpeg-dev pango-dev giflib-dev python3 ca-certificates
 
 COPY --from=builder /app/ ./
 

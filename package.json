@@ -2,7 +2,7 @@
   "name": "djs-handler",
   "version": "0.1.0",
   "description": "Handler?",
-  "main": "./dist/index.js",
+  "main": "./dist/src/index.js",
   "author": "Rechz <demonlscrazy334@gmail.com>",
   "license": "NOT LICENSED",
   "private": true,
