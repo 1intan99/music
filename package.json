@@ -2,13 +2,14 @@
   "name": "djs-handler",
   "version": "0.1.0",
   "description": "Handler?",
-  "main": "./dist/src/index.js",
+  "main": "./dist/index.js",
   "author": "Rechz <demonlscrazy334@gmail.com>",
   "license": "NOT LICENSED",
   "private": true,
   "scripts": {
     "dev": "nodemon",
-    "prod": "node ./dist/index.js"
+    "prod": "tsc && node .",
+    "build": "tsc"
   },
   "dependencies": {
     "chalk": "4.1.2",

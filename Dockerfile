@@ -2,7 +2,6 @@ FROM node:16-alpine AS builder
 
 ## di pake buat build doang and copy hasil build
 
-WORKDIR /opt/Lavalink
 WORKDIR /app
 
 COPY . .
@@ -18,12 +17,11 @@ WORKDIR /app
 
 # uncomment bawah ini kalo pake canvas
 RUN apk update \
-    && apk add --no-cache build-base g++ cairo-dev jpeg-dev pango-dev giflib-dev python3 ca-certificates
-
-ENV LANG en_US.UTF-8
+    && apk add --no-cache build-base g++ cairo-dev jpeg-dev pango-dev giflib-dev python3 ca-certificates \
+    && apk add --update  --repository http://dl-3.alpinelinux.org/alpine/edge/testing libmount ttf-dejavu ttf-droid ttf-freefont ttf-liberation fontconfig 
 
 COPY --from=builder /app/ ./
 
 RUN npm install
 
-CMD [ "node", "build/index.js" ]
+CMD [ "node", "." ]
