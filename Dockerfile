@@ -26,4 +26,4 @@ COPY --from=builder /app/ ./
 
 RUN npm install
 
-CMD [ "npm", "run" "prod" ]
+CMD [ "node", "build/index.js" ]
