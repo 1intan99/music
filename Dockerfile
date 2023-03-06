@@ -26,4 +26,4 @@ COPY --from=builder /app/ ./
 
 RUN npm install
 
-CMD [ "node", "dist" "index.js"]
+CMD ["node", "dist" "index.js"]
