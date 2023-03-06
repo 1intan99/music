@@ -43,6 +43,12 @@ class PlayerHandler {
                 break;
             case 'TRACK':
                 // eslint-disable-next-line no-case-declarations
+                const track_url = result.tracks.shift();
+                player.queue.add(track_url);
+                channel.send(`Added **${track_url.title}** into the queue.`);
+                break;
+            case 'SEARCH':
+                // eslint-disable-next-line no-case-declarations
                 const track = result.tracks.shift();
                 player.queue.add(track);
                 channel.send(`Added **${track.title}** into the queue.`);
