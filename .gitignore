@@ -1,0 +1,7 @@
+node_modules
+*.log
+.env
+dist
+srcd
+docker-compose.yml
+nodes.json

@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  amberna:
+    image: amberna:latest
+    environment:
+      - DISCORD_TOKEN=
+      - prefix=
+      - developerps=[""]
+      - CLIENT_ID=
+      - CLIENT_SECRET=
+    networks:
+      - kongnet
+
+networks:
+  kongnet:
+        attachable: true
+        external: true
