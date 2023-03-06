@@ -2,7 +2,7 @@ version: '3'
 
 services:
   amberna:
-    image: amberna:latest
+    image: image_name:latest
     environment:
       - DISCORD_TOKEN=
       - prefix=
