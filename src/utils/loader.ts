@@ -2,7 +2,7 @@ import Bot from '../structures/client';
 import Command from '../structures/command';
 import Event from '../structures/event';
 import Payload from '../structures/payload';
-import { Nodes } from '../config/conf';
+import Nodes from '../../nodes.json';
 
 import path from 'path';
 import glob from 'glob';
